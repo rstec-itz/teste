@@ -1,0 +1,62 @@
+TLPD Change Log
+~~~~~~~~~~~~~~~~
+
+v4.6.0.1:
+added "Product name" and "Product version" to the executable file
+
+v4.6:
+bugfix when ordered to scan all drives
+
+v4.5:
+SUMMARY:
+	reduce memory usage
+	custom tray menu
+	"Running" and "suspend" indication in tray icon
+	too long folder name skips listing file and subfolders
+DETAILS:
+_BrowseForFolderXP cancel => program exit with exit code 9
+bad parameters notified to log file instead of MsgBox
+changed exit code 4 to 8 (SCRIPT-BREAKING!)
+added exit code 4 for invalid parameters count
+tray tip when started
+custom tray menu (Suspend+Exit) and grayed-out icon when suspended
+start time added to the log
+suspend indication added to the log
+ReadMe updates
+minor modifications to the log
+[technical] consolidate "scan all drives" with "scan one path"
+[technical] use custom accumulative function instead of _FileListToArrayRec() to reduce memory usage
+
+v4.0:
+use recent AutoIt v3.3.14.2
+run as x64, compile to both
+use _BrowseForFolderXP
+wrapper directive for au3check + resolve issues
+removed threshold upper limit
+minor modification to the tray tip
+cancel use of _ArrayConcatenate() and #include <Array.au3> => no change in size
+
+v2.0:
+_FileListToArrayRec() instead of recursion
+added timing
+correction: invalid threshold exit code was set to 1 instead of 2 as stated in ReadMe file
+exit codes changed for 1 to reflect termination by external means
+dialog change: default [Yes] is for specific path, [No] for all drives
+obfuscator for striponly
+minor syntax/phrasing changes
+
+v1.2.1:
+added executable wrapper with version number and description.
+no UPX compression when compiled to executable.
+
+
+v1.2:
+now can also check all drives in a single run in standard (GUI) mode, not just silent
+
+v1.1:
+1) can now check all drives (local and mapped network) in a single run.
+2) in silent mode, tray icon is not shown.
+3) minor code and syntax changes.
+
+v1.0:
+first release.
